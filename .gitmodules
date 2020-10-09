@@ -4,3 +4,6 @@
 [submodule "promise"]
 	path = promise
 	url = https://github.com/reactphp/promise
+[submodule "parallel"]
+	path = parallel
+	url = https://github.com/amphp/parallel
