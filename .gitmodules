@@ -1,0 +1,6 @@
+[submodule "amp"]
+	path = amp
+	url = https://github.com/amphp/amp
+[submodule "promise"]
+	path = promise
+	url = https://github.com/reactphp/promise
