@@ -15,7 +15,6 @@ final class Module_AmPHP extends GDO_Module
     
     public function autoload($name)
     {
-        var_dump($name);
         if (Strings::startsWith($name, 'Amp\\'))
         {
             $name = str_replace('\\', '/', $name);
