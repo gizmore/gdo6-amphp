@@ -6,6 +6,8 @@ use GDO\Util\Strings;
 
 final class Module_AmPHP extends GDO_Module
 {
+    public function thirdPartyFolders() { return ['/amp/', '/parallel/', '/promise/']; }
+    
     public function onInit()
     {
         spl_autoload_register(array(__CLASS__, 'autoload'));
