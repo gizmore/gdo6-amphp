@@ -3,6 +3,7 @@ namespace GDO\AmPHP;
 
 use GDO\Core\GDO_Module;
 use GDO\Util\Strings;
+use GDO\Core\GDT_Array;
 
 final class Module_AmPHP extends GDO_Module
 {
@@ -23,6 +24,13 @@ final class Module_AmPHP extends GDO_Module
             $name = Strings::substrFrom($name, 'Amp/');
             require_once 'amp/lib/' . $name . '.php';
         }
+    }
+ 
+    public function hookIgnoreDocsFiles(GDT_Array $ignore)
+    {
+        $ignore->data[] = 'GDO/AmPHP/amp/**/*';
+        $ignore->data[] = 'GDO/AmPHP/parallel/**/*';
+        $ignore->data[] = 'GDO/AmPHP/promise/**/*';
     }
     
 }
