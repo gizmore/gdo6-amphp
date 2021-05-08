@@ -12,8 +12,8 @@ final class Module_AmPHP extends GDO_Module
     public function onInit()
     {
         spl_autoload_register(array(__CLASS__, 'autoload'));
-        require_once 'amp/lib/functions.php';
-        require_once 'amp/lib/Internal/functions.php';
+        require 'amp/lib/functions.php';
+        require 'amp/lib/Internal/functions.php';
     }
     
     public function autoload($name)
@@ -22,7 +22,7 @@ final class Module_AmPHP extends GDO_Module
         {
             $name = str_replace('\\', '/', $name);
             $name = Strings::substrFrom($name, 'Amp/');
-            require_once 'amp/lib/' . $name . '.php';
+            require 'amp/lib/' . $name . '.php';
         }
     }
  
