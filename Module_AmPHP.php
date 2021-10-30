@@ -33,4 +33,11 @@ final class Module_AmPHP extends GDO_Module
         $ignore->data[] = 'GDO/AmPHP/promise/**/*';
     }
     
+    public function getModuleLicenseFilenames()
+    {
+        return [
+            'amp/LICENSE',
+        ];
+    }
+    
 }
